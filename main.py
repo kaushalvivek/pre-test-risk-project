@@ -1,8 +1,13 @@
+'''
+MAIN
+
+This is the state machine of the application.
+'''
+
 import os
 import controller
 import view
 import model
-from user import User
 
 os.system ("clear")
 view.print_initiate()

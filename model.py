@@ -1,3 +1,13 @@
+'''
+MODEL
+
+The data centre of the application.
+Contains all data points of the app,
+common throughout the application.
+
+Imported by main, view and controller.
+'''
+
 from numpy import genfromtxt
 import random
 
@@ -16,12 +26,30 @@ low_co = [i for i in range(10,19)] + [i for i in range(30,49)]
 
 base_dataset = genfromtxt('dataset.csv', delimiter=',')
 
+#Arrays of Environment Variables
 hj_sal = []
 lj_sal = []
 hj_req = []
 lj_req = []
 hj_co = []
 lj_co = []
-score = []
+cutoff_score = []
+salary = []
+
+#Environment Variables
 iteration = 0
-current_score = -1
+mode = -1
+scenario = -1
+choice = -1
+net_salary = 0
+fired_count = 0
+
+#Data Variables
+name = ""
+email = ""
+age = ""
+branch = ""
+
+#Flags
+co_flag = 0
+fired_flag = 0
